@@ -17,23 +17,13 @@
 int	main(void)
 {
 	int	fd;
-	char	buf[1];
-	ssize_t	ret;
 
 	fd = open("test.txt", O_RDONLY);
-	ret = read(fd, buf, 1);
-	printf("%zd\n", ret);
-	ret = read(fd, buf, 1);
-	printf("%zd\n", ret);
-	ret = read(fd, buf, 1);
-	printf("%zd\n", ret);
-	ret = read(fd, buf, 1);
-	printf("%zd\n", ret);
 
-//	printf("line1 : %s", get_next_line(fd));
-//	printf("line2 : %s", get_next_line(fd));
-//	printf("line3 : %s", get_next_line(fd));
-//	printf("line4 : %s", get_next_line(fd));
+	printf("line1 : %s", get_next_line(fd));
+	printf("line2 : %s", get_next_line(fd));
+	printf("line3 : %s", get_next_line(fd));
+	printf("line4 : %s", get_next_line(fd));
 //	printf("line5 : %s", get_next_line(fd));
 //	printf("line6 : %s", get_next_line(fd));
 	close (fd);

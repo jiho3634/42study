@@ -37,7 +37,7 @@ t_list	*ft_lstlast(t_list *lst)
 
 void	ft_lstadd_back(t_list **lst, t_list *new)
 {
-	t_list	temp;
+	t_list	*temp;
 
 	if (!*lst)
 		*lst = new;
@@ -54,7 +54,7 @@ size_t	ft_strlen(const char *s)
 	size_t	len;
 
 	len = 0;
-	while (s[len])
+	while (s && s[len])
 		len++;
 	return (len);
 }
@@ -68,9 +68,9 @@ char	*ft_strjoin(char *s1, char *s2)
 	if (!s3)
 		return (0);
 	i = 0;
-	while (*s1)
+	while (s1 && *s1)
 		s3[i++] = *(s1++);
-	while (*s2)
+	while (s2 && *s2)
 		s3[i++] = *(s2++);
 	s3[i] = 0;
 	return (s3);
