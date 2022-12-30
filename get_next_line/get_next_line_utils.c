@@ -106,6 +106,5 @@ char	*ft_strdup(const char *s1)
 	*(ptr + len) = 0;
 	while (len-- > 0)
 		*(ptr + len) = *(s1 + len);
-	free (ptr);
 	return (ptr);
 }
