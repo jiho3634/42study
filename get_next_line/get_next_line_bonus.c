@@ -1,14 +1,15 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line.c                                    :+:      :+:    :+:   */
+/*   get_next_line_bonus.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jihokim2 <jihokim2@student.42seoul.>       +#+  +:+       +#+        */
+/*   By: jihokim2 <jihokim2@student.42seoul.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/23 14:25:09 by jihokim2          #+#    #+#             */
 /*   Updated: 2022/12/23 14:31:06 by jihokim2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#include <stdio.h>
 #include "get_next_line.h"
 
 void	get_ready(int fd, t_list **lst, char **line)
@@ -75,7 +76,7 @@ void	do_free(t_list **lst, char **line, ssize_t ret)
 	return ;
 }
 
-static int	make_line(int fd, t_list **lst, char **line)
+int	make_line(int fd, t_list **lst, char **line)
 {
 	char	buf[BUFFER_SIZE + 1];
 	char	*temp;
