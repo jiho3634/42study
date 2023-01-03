@@ -9,6 +9,7 @@
 /*   Updated: 2022/12/23 14:32:07 by jihokim2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include "get_next_line.h"
 
 t_list	*ft_lstnew(int fd)
@@ -69,19 +70,4 @@ char	*ft_strchr(const char *s, int c)
 	if (!c2)
 		return ((char *) &s[i]);
 	return (NULL);
-}
-
-char	*ft_strdup(const char *s1)
-{
-	size_t	len;
-	char	*ptr;
-
-	len = ft_strlen(s1);
-	ptr = (char *) malloc (sizeof(char) * (len + 1));
-	if (!ptr)
-		return (0);
-	*(ptr + len) = 0;
-	while (len-- > 0)
-		*(ptr + len) = *(s1 + len);
-	return (ptr);
 }
